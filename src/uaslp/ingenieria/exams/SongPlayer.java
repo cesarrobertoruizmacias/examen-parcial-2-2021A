@@ -1,10 +1,10 @@
 package uaslp.ingenieria.exams;
-
 import uaslp.ingenieria.exams.instruments.*;
-
 import java.util.Iterator;
 
-public class SongPlayer {
+import static uaslp.ingenieria.exams.Instrumento.*;
+
+public class SongPlayer<G> {
 
     public void play(Song song, Instrumento instrumento) {
 
@@ -15,7 +15,8 @@ public class SongPlayer {
         Flauta flauta = new Flauta();
 
         while (notas.hasNext()) {
-            Nota nota = notas.next();
+            Nota nota;
+            nota = notas.next();
 
             switch (instrumento) {
                 case PIANO -> piano.presionaTecla(nota);

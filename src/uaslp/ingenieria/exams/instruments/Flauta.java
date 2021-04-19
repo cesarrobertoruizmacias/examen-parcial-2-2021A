@@ -6,4 +6,5 @@ public class Flauta {
     public void sopla(Nota nota) {
 
     }
+
 }
